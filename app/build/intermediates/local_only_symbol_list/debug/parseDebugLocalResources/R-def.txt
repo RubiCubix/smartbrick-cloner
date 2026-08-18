@@ -1,0 +1,20 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id cancelWriteButton
+id copyButton
+id copyStatusText
+id inventoryText
+id loadFileButton
+id saveFileButton
+id statusText
+id tagInfoText
+id viewDataButton
+id writeCopyButton
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+style Theme.NfcObjectGame

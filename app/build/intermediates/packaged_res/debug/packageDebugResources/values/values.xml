@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <style name="Theme.NfcObjectGame" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#6750A4</item>
+        <item name="colorPrimaryVariant">#6750A4</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+</resources>

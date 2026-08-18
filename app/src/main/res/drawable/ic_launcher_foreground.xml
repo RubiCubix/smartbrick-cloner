@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- LEGO Brick Shape -->
+    <path
+        android:fillColor="#D32F2F"
+        android:pathData="M30,45h48v24h-48z" />
+    <path
+        android:fillColor="#D32F2F"
+        android:pathData="M35,40h10v5h-10zM63,40h10v5h-10z" />
+    <path
+        android:fillColor="#B71C1C"
+        android:pathData="M30,69h48v3h-48z" />
+
+    <!-- NFC Signal Symbol -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M54,20c-11.05,0-20,8.95-20,20h4c0-8.84,7.16-16,16-16s16,7.16,16,16h4c0-11.05-8.95-20-20-20z" />
+    <path
+        android:fillColor="#212121"
+        android:pathData="M54,28c-6.63,0-12,5.37-12,12h4c0-4.42,3.58-8,8-8s8,3.58,8,8h4c0-6.63-5.37-12-12-12z" />
+
+</vector>
