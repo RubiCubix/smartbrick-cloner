@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity(), NfcAdapter.ReaderCallback {
     private lateinit var statusText: TextView
     private lateinit var tagInfoText: TextView
     private lateinit var cancelWriteButton: Button
-    private lateinit var inventoryText: TextView
     private lateinit var copyButton: Button
     private lateinit var writeCopyButton: Button
     private lateinit var viewDataButton: Button
@@ -33,7 +32,6 @@ class MainActivity : AppCompatActivity(), NfcAdapter.ReaderCallback {
     private lateinit var saveFileButton: Button
     private lateinit var copyStatusText: TextView
 
-    private val inventory = mutableSetOf<String>()
     private var capturedMessage: NdefMessage? = null
     private var capturedRawData: ByteArray? = null
     private var capturedRawTech: String? = null
@@ -56,7 +54,6 @@ class MainActivity : AppCompatActivity(), NfcAdapter.ReaderCallback {
         statusText = findViewById(R.id.statusText)
         tagInfoText = findViewById(R.id.tagInfoText)
         cancelWriteButton = findViewById(R.id.cancelWriteButton)
-        inventoryText = findViewById(R.id.inventoryText)
         copyButton = findViewById(R.id.copyButton)
         writeCopyButton = findViewById(R.id.writeCopyButton)
         viewDataButton = findViewById(R.id.viewDataButton)
@@ -456,7 +453,6 @@ class MainActivity : AppCompatActivity(), NfcAdapter.ReaderCallback {
             "• ${it.substringAfterLast('.')}"
         }
 
-        var ndefText: String? = null
         var ndefStatus = "No NDEF data"
 
         val ndef = Ndef.get(tag)
@@ -464,10 +460,7 @@ class MainActivity : AppCompatActivity(), NfcAdapter.ReaderCallback {
             try {
                 ndef.connect()
                 val message = ndef.ndefMessage
-                ndefText = message?.records
-                    ?.firstNotNullOfOrNull { parseTextRecord(it) }
-
-                ndefStatus = ndefText ?: "NDEF formatted, but no text record found"
+                ndefStatus = if (message != null) "NDEF formatted (${message.toByteArray().size} bytes)" else "NDEF formatted, but empty"
             } catch (e: Exception) {
                 ndefStatus = "Could not read NDEF: ${e.message}"
             } finally {
@@ -490,47 +483,8 @@ class MainActivity : AppCompatActivity(), NfcAdapter.ReaderCallback {
         """.trimIndent()
 
         runOnUiThread {
-            if (ndefText != null) {
-                val isNew = inventory.add(ndefText)
-                statusText.text = if (isNew) "NEW DISCOVERY: $ndefText" else "You already have: $ndefText"
-                if (isNew) updateInventoryUI()
-            } else {
-                statusText.text = "NFC tag detected"
-            }
-
+            statusText.text = "NFC tag detected"
             tagInfoText.text = result
         }
-    }
-
-    private fun updateInventoryUI() {
-        if (inventory.isEmpty()) {
-            inventoryText.text = "No objects found yet. Start scanning!"
-        } else {
-            val list = inventory.sorted().joinToString("\n") { "• $it" }
-            inventoryText.text = list
-        }
-    }
-
-    private fun parseTextRecord(record: NdefRecord): String? {
-        if (record.tnf != NdefRecord.TNF_WELL_KNOWN) return null
-        if (!record.type.contentEquals(NdefRecord.RTD_TEXT)) return null
-
-        val payload = record.payload
-        if (payload.isEmpty()) return null
-
-        val status = payload[0].toInt()
-        val languageLength = status and 0x3F
-        val utf16 = status and 0x80 != 0
-
-        if (payload.size <= 1 + languageLength) return null
-
-        val charset: Charset =
-            if (utf16) Charsets.UTF_16
-            else Charsets.UTF_8
-
-        return payload.copyOfRange(
-            1 + languageLength,
-            payload.size
-        ).toString(charset)
     }
 }

@@ -89,28 +89,5 @@
             android:visibility="gone"
             android:layout_marginTop="8dp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#CCCCCC"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="16dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Collection History"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingBottom="8dp" />
-
-        <TextView
-            android:id="@+id/inventoryText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No bricks discovered yet."
-            android:textSize="16sp"
-            android:paddingBottom="40dp" />
-
     </LinearLayout>
 </ScrollView>

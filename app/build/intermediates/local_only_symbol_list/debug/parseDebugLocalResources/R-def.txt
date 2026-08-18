@@ -7,7 +7,6 @@ drawable ic_launcher_foreground
 id cancelWriteButton
 id copyButton
 id copyStatusText
-id inventoryText
 id loadFileButton
 id saveFileButton
 id statusText

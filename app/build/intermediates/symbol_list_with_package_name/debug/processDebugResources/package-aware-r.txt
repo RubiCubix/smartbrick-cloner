@@ -3210,7 +3210,6 @@ id ignoreRequest
 id image
 id indeterminate
 id info
-id inventoryText
 id invisible
 id inward
 id italic

@@ -26,10 +26,10 @@ com.example.nfcobjectgame.app-lifecycle-viewmodel-savedstate-2.6.2-24 C:\Users\R
 com.example.nfcobjectgame.app-annotation-experimental-1.4.1-25 C:\Users\Rasmus\.gradle\caches\9.3.0\transforms\eda502f857b0b43ae92a729f2c0c75c4\workspace\transformed\annotation-experimental-1.4.1\res
 com.example.nfcobjectgame.app-lifecycle-livedata-2.6.2-26 C:\Users\Rasmus\.gradle\caches\9.3.0\transforms\f3e45c6f4100a1f8c4d6f2f85a6ec9f4\workspace\transformed\lifecycle-livedata-2.6.2\res
 com.example.nfcobjectgame.app-coordinatorlayout-1.1.0-27 C:\Users\Rasmus\.gradle\caches\9.3.0\transforms\fc54c8970a5cefe759b8aa56e0ee56e1\workspace\transformed\coordinatorlayout-1.1.0\res
-com.example.nfcobjectgame.app-pngs-28 C:\Users\Rasmus\Documents\GitHub\android-nfc-game\app\build\generated\res\pngs\debug
-com.example.nfcobjectgame.app-resValues-29 C:\Users\Rasmus\Documents\GitHub\android-nfc-game\app\build\generated\res\resValues\debug
-com.example.nfcobjectgame.app-packageDebugResources-30 C:\Users\Rasmus\Documents\GitHub\android-nfc-game\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.nfcobjectgame.app-packageDebugResources-31 C:\Users\Rasmus\Documents\GitHub\android-nfc-game\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.nfcobjectgame.app-debug-32 C:\Users\Rasmus\Documents\GitHub\android-nfc-game\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.example.nfcobjectgame.app-debug-33 C:\Users\Rasmus\Documents\GitHub\android-nfc-game\app\src\debug\res
-com.example.nfcobjectgame.app-main-34 C:\Users\Rasmus\Documents\GitHub\android-nfc-game\app\src\main\res
+com.example.nfcobjectgame.app-pngs-28 C:\Users\Rasmus\Documents\GitHub\smartbrick-cloner\app\build\generated\res\pngs\debug
+com.example.nfcobjectgame.app-resValues-29 C:\Users\Rasmus\Documents\GitHub\smartbrick-cloner\app\build\generated\res\resValues\debug
+com.example.nfcobjectgame.app-packageDebugResources-30 C:\Users\Rasmus\Documents\GitHub\smartbrick-cloner\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.nfcobjectgame.app-packageDebugResources-31 C:\Users\Rasmus\Documents\GitHub\smartbrick-cloner\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.nfcobjectgame.app-debug-32 C:\Users\Rasmus\Documents\GitHub\smartbrick-cloner\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.nfcobjectgame.app-debug-33 C:\Users\Rasmus\Documents\GitHub\smartbrick-cloner\app\src\debug\res
+com.example.nfcobjectgame.app-main-34 C:\Users\Rasmus\Documents\GitHub\smartbrick-cloner\app\src\main\res
